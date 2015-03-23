@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # ex1.py
+import sys
 
 """
 Author: Santhosh Kokala
@@ -20,8 +21,12 @@ def max(first, second):
     else:
         return second
 
-# Test inputs for max() function
-print max(1,2)
-print max(3,1)
-print max(-1,4)
-print max(-1,-2)
+def main():
+    # Test inputs for max() function
+    print max(1,2)
+    print max(3,1)
+    print max(-1,4)
+    print max(-1,-2)
+
+if __name__ == "__main__":
+    sys.exit(main())

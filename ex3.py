@@ -2,7 +2,7 @@
 # ex3.py
 
 """
-Author: Santhosh Kokala
+Author: Santhosh
 Date: 03/23/2015
 
 Problem Statement:

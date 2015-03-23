@@ -4,7 +4,7 @@
 import sys
 from ex1 import max
 """
-Author: Santhosh Kokala
+Author: Santhosh
 Date: 03/23/2015
 
 Problem Statement:

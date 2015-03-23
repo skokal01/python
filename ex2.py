@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # ex2.py
 
+import sys
 from ex1 import max
 """
 Author: Santhosh Kokala
@@ -13,8 +14,18 @@ returns the largest of them.
 
 """
 
-# Test inputs for max() function
-print max(1,2)
-print max(3,1)
-print max(-1,4)
-print max(-1,-2)
+def max_of_three(first, second, three):
+    largest = max(first, second)
+    return max(largest, three)
+
+def main():
+    # Test inputs for max() function
+    print max_of_three(1,2,3)
+    print max_of_three(3,2,1)
+    print max_of_three(3,1,2)
+    print max_of_three(-1,-2,-3)
+    print max_of_three(-3,-2,-1)
+    print max_of_three(-3,-1,-2)
+
+if __name__ == "__main__":
+    sys.exit(main())

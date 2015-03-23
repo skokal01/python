@@ -4,6 +4,7 @@
 <h2>46 Simple Python Exercises</h2>
 <p style="font-size:110%; font-weight:normal">
     This is version 0.45 of a collection of simple Python exercises constructed (but in many cases only found and collected) by Torbjörn Lager (torbjorn.lager@ling.gu.se). Most of them involve characters, words and phrases, rather than numbers, and are therefore suitable for students interested in language rather than math.
+    <a href="http://www.ling.gu.se/~lager/python_exercises.html">Problem Statements</a>
 </p>
 <ol>
 <h3>Very simple exercises</h3>

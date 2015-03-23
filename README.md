@@ -1,67 +1,149 @@
-# python
-46 Simple Python Exercises
-This is version 0.45 of a collection of simple Python exercises constructed (but in many cases only found and collected) by Torbjörn Lager (torbjorn.lager@ling.gu.se). Most of them involve characters, words and phrases, rather than numbers, and are therefore suitable for students interested in language rather than math.
 
-Very simple exercises
----------------------
+<!--
+    More sketches
+    
+    1. substitute 3 for e, 1 for l, etc. creating a certain effect 3L3V3N
+    2. find the average length of words in a text file (perhaps also median and standard deviation)
+    3. Eliza
+    4. glosträningsprogram
+    5. Ceasar cypher 
+    6. spelling correction
+    7. sentence splitting
+    8. fonetiska alfabetet (alfa bravo charlie) - os.system('say ' + mess)
+    9. något med morse-alfabetet
+    10. konkordansprogram
+    11 Adventure game (see Prolog game)
+    
+    Grep-övningar: http://sed.sourceforge.net/sed1line.txt
 
-1. Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Python. (It is true that Python has the max() function built in, but writing it yourself is nevertheless a good exercise.)
+    
+    - More regular expressions problems (spelling correction?, tokenization? sentence splitting?)
+    - Problems where sets are useful (building a wordlist?)
+    - More problems where dictionaries are useful
+    - sortering
+    
+    - Kanske att uppgifter som använder higher order functions / list comprehensions ska vara egna uppgifter.
+    
+-->
+<html>
+<head>
+  <title>46 Simple Python Exercises</title>
+</head>
+<style>
+body {
+  font-size: 90%;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: arial, helvetica;
+}
+h3 {
+    margin-left: -2em;
+}
+li li {list-style-type: lower-alpha;}
 
-2. Define a function max_of_three() that takes three numbers as arguments and returns the largest of them.
+#page {
+   background-color: linen;
+   margin-left: 3em;
+   width:850px;
+}
 
-3. Define a function that computes the length of a given list or string. (It is true that Python has the len() function built in, but writing it yourself is nevertheless a good exercise.)
+#inner {
+   padding: 40px;
+}
 
-4. Write a function that takes a character (i.e. a string of length 1) and returns True if it is a vowel, False otherwise.
-
-5. Write a function translate() that will translate a text into "rövarspråket" (Swedish for "robber's language"). That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
-
-6. Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in a list of numbers. For example, sum([1, 2, 3, 4]) should return 10, and multiply([1, 2, 3, 4]) should return 24.
-
-7. Define a function reverse() that computes the reversal of a string. For example, reverse("I am testing") should return the string "gnitset ma I".
-
-8. Define a function is_palindrome() that recognizes palindromes (i.e. words that look the same written backwards). For example, is_palindrome("radar") should return True.
-
-9. Write a function is_member() that takes a value (i.e. a number, string, etc) x and a list of values a, and returns True if x is a member of a, False otherwise. (Note that this is exactly what the in operator does, but for the sake of the exercise you should pretend Python did not have this operator.)
-
-10. Define a function overlapping() that takes two lists and returns True if they have at least one member in common, False otherwise. You may use your is_member() function, or the in operator, but for the sake of the exercise, you should (also) write it using two nested for-loops.
-
-11. Define a function generate_n_chars() that takes an integer n and a character c and returns a string, n characters long, consisting only of c:s. For example, generate_n_chars(5,"x") should return the string "xxxxx". (Python is unusual in that you can actually write an expression 5 * "x" that will evaluate to "xxxxx". For the sake of the exercise you should ignore that the problem can be solved in this manner.)
-
-12. Define a procedure histogram() that takes a list of integers and prints a histogram to the screen. For example, histogram([4, 9, 7]) should print the following:
-
-/*
+</style>
+<body>
+<div id="page"><div id="inner">
+<h2>46 Simple Python Exercises</h2>
+<p style="font-size:110%; font-weight:normal">
+    This is version 0.45 of a collection of simple Python exercises constructed (but in many cases only found and collected) by Torbjörn Lager (torbjorn.lager@ling.gu.se). Most of them involve characters, words and phrases, rather than numbers, and are therefore suitable for students interested in language rather than math.
+</p>
+<ol>
+<h3>Very simple exercises</h3>
+  <li>
+    <p>Define a function <code>max()</code> that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Python. (It is true that Python has the <code>max()</code> function built in, but writing it yourself is nevertheless a good exercise.)</p>
+  </li>
+  <li>
+    <p>Define a function <code>max_of_three()</code> that takes three numbers as arguments and returns the largest of them.</p>
+  </li>
+  <li>
+    <p>Define a function that computes the <em>length</em> of a given list or string. (It is true that Python has the <code>len()</code> function built in, but writing it yourself is nevertheless a good exercise.)</p>
+  </li>
+  <li>
+    <p>Write a function that takes a character (i.e. a string of length 1) and returns <code>True</code> if it is a vowel, <code>False</code> otherwise.</p>
+  </li>
+  <li>
+    <p>Write a function <code>translate()</code> that will translate a text into "rövarspråket" (Swedish for "robber's language"). That is, double every consonant and place an occurrence of <code>"o"</code> in between. For example, <code>translate("this is fun")</code> should return the string <code>"tothohisos isos fofunon"</code>.</p>
+  </li>
+  <li>
+    <p>Define a function <code>sum()</code> and a function <code>multiply()</code> that sums and multiplies (respectively) all the numbers in a list of numbers. For example, <code>sum([1, 2, 3, 4])</code> should return <code>10</code>, and <code>multiply([1, 2, 3, 4])</code> should return <code>24</code>.</p>
+  </li>
+  <li>
+    <p>Define a function <code>reverse()</code> that computes the reversal of a string. For example, <code>reverse("I am testing")</code> should return the string <code>"gnitset ma I"</code>.</p>
+  </li>
+  <li>
+    <p>Define a function <code>is_palindrome()</code> that recognizes palindromes (i.e. words that look the same written backwards). For example, <code>is_palindrome("radar")</code> should return <code>True</code>.</p>
+  </li>
+  <li>
+    <p>Write a function <code>is_member()</code> that takes a value (i.e. a number, string, etc) <code>x</code> and a list of values <code>a</code>, and returns <code>True</code> if <code>x</code> is a member of <code>a</code>, <code>False</code> otherwise. (Note that this is exactly what the <code>in</code> operator does, but for the sake of the exercise you should pretend Python did not have this operator.)</p>
+  </li>
+  <li>
+    <p>Define a function <code>overlapping()</code> that takes two lists and returns True if they have at least one member in common, False otherwise. You may use your <code>is_member()</code> function, or the <code>in</code> operator, but for the sake of the exercise, you should (also) write it using two nested for-loops.</p>
+  </li>
+  <li>
+    <p>Define a function <code>generate_n_chars()</code> that takes an integer <code>n</code> and a character <code>c</code> and returns a string, <code>n</code> characters long, consisting only of <code>c</code>:s. For example, <code>generate_n_chars(5,"x")</code> should return the string <code>"xxxxx"</code>. (Python is unusual in that you can actually write an expression <code>5 * "x"</code> that will evaluate to <code>"xxxxx"</code>. For the sake of the exercise you should ignore that the problem can be solved in this manner.)</p>
+  </li>
+  <li>
+    <p>Define a <em>procedure</em> <code>histogram()</code> that takes a list of integers and prints a histogram to the screen. For example, <code>histogram([4, 9, 7])</code> should print the following:<p>
+    <pre>
 ****
 *********
-*******
-*/
+*******</pre>
+  </li>
+  <li>
+    <p>The function <code>max()</code> from exercise 1) and the function <code>max_of_three()</code> from exercise 2) will only work for two and three numbers, respectively. But suppose we have a much larger number of numbers, or suppose we cannot tell in advance how many they are? Write a function <code>max_in_list()</code> that takes a <em>list</em> of numbers and returns the largest one.</p>
+  </li>
+  <li>
+    <p>Write a program that maps a list of words into a list of integers representing the lengths of the correponding words.</p>
+  </li>
+  <li>
+    <p>Write a function <code>find_longest_word()</code> that takes a list of words and returns the length of the longest one.</p>
+  </li>
+  <li>
+    <p>Write a function <code>filter_long_words()</code> that takes a list of words and an integer <code>n</code> and returns the list of words that are longer than <code>n</code>.</p>
+  </li>
+  <li>
+    <p>Write a version of a palindrome recognizer that also accepts phrase palindromes such as "Go hang a salami I'm a lasagna hog.", "Was it a rat I saw?", "Step on no pets", "Sit on a potato pan, Otis", "Lisa Bonet  ate no basil", "Satan, oscillate my metallic sonatas", "I roamed under it as a tired nude Maori", "Rise to vote sir", or the exclamation "Dammit, I'm mad!". Note that punctuation, capitalization, and spacing are usually ignored.</p>
+  </li>
 
-13. The function max() from exercise 1) and the function max_of_three() from exercise 2) will only work for two and three numbers, respectively. But suppose we have a much larger number of numbers, or suppose we cannot tell in advance how many they are? Write a function max_in_list() that takes a list of numbers and returns the largest one.
+  <li>
+    <p>A <em>pangram</em> is a sentence that contains all the letters of the English alphabet at least once, for example: <em>The quick brown fox jumps over the lazy dog</em>. Your task here is to write a function to check a sentence to see if it is a pangram or not.
+    </p>
+  </li>
+<li>
+<p>"99 Bottles of Beer" is a traditional song in the United States and Canada. It is popular to sing on long trips, as it has a very repetitive format which is easy to memorize, and can take a long time to sing. The song's simple lyrics are as follows:
+    
+<blockquote>
+<p>99 bottles of beer on the wall, 99 bottles of beer.<br>
+Take one down, pass it around, 98 bottles of beer on the wall.</p>
+</blockquote>
 
-14. Write a program that maps a list of words into a list of integers representing the lengths of the correponding words.
+<p>The same verse is repeated, each time with one fewer bottle. The song is completed when the singer or singers reach zero.</p>
 
-15. Write a function find_longest_word() that takes a list of words and returns the length of the longest one.
+<p>Your task here is write a Python program capable of generating all the verses of the song.</p>  
+</li>
 
-16. Write a function filter_long_words() that takes a list of words and an integer n and returns the list of words that are longer than n.
-
-17. Write a version of a palindrome recognizer that also accepts phrase palindromes such as "Go hang a salami I'm a lasagna hog.", "Was it a rat I saw?", "Step on no pets", "Sit on a potato pan, Otis", "Lisa Bonet ate no basil", "Satan, oscillate my metallic sonatas", "I roamed under it as a tired nude Maori", "Rise to vote sir", or the exclamation "Dammit, I'm mad!". Note that punctuation, capitalization, and spacing are usually ignored.
-
-18. A pangram is a sentence that contains all the letters of the English alphabet at least once, for example: The quick brown fox jumps over the lazy dog. Your task here is to write a function to check a sentence to see if it is a pangram or not.
-
-19. "99 Bottles of Beer" is a traditional song in the United States and Canada. It is popular to sing on long trips, as it has a very repetitive format which is easy to memorize, and can take a long time to sing. The song's simple lyrics are as follows:
-
-99 bottles of beer on the wall, 99 bottles of beer.
-Take one down, pass it around, 98 bottles of beer on the wall.
-
-The same verse is repeated, each time with one fewer bottle. The song is completed when the singer or singers reach zero.
-
-Your task here is write a Python program capable of generating all the verses of the song.
-
-20. Represent a small bilingual lexicon as a Python dictionary in the following fashion {"merry":"god", "christmas":"jul", "and":"och", "happy":gott", "new":"nytt", "year":"år"} and use it to translate your Christmas cards from English into Swedish. That is, write a function translate() that takes a list of English words and returns a list of Swedish words.
-
-21. Write a function char_freq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Python dictionary. Try it with something like char_freq("abbabcbdbabdbdbabababcbcbab").
-
-22. In cryptography, a Caesar cipher is a very simple encryption techniques in which each letter in the plain text is replaced by a letter some fixed number of positions down the alphabet. For example, with a shift of 3, A would be replaced by D, B would become E, and so on. The method is named after Julius Caesar, who used it to communicate with his generals. ROT-13 ("rotate by 13 places") is a widely used example of a Caesar cipher where the shift is 13. In Python, the key for ROT-13 may be represented by means of the following dictionary:
-
+  <li>
+    <p>Represent a small bilingual lexicon as a Python dictionary in the following fashion <code>{"merry":"god", "christmas":"jul", "and":"och", "happy":gott", "new":"nytt", "year":"år"}</code> and use it to translate your Christmas cards from English into Swedish. That is, write a function <code>translate()</code> that takes a list of English words and returns a list of Swedish words.</p>
+  </li>
+  <li>
+    <p>Write a function <code>char_freq()</code> that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Python dictionary. Try it with something like <code>char_freq("abbabcbdbabdbdbabababcbcbab")</code>.</p>
+  </li>
+<li>
+    <p>
+In cryptography, a <em>Caesar cipher</em> is a very simple encryption techniques in which each letter in the plain text is replaced by a letter some fixed number of positions down the alphabet. For example, with a shift of 3, A would be replaced by D, B would become E, and so on. The method is named after Julius Caesar, who used it to communicate with his generals. <em>ROT-13</em> ("rotate by 13 places") is a widely used example of a Caesar cipher where the shift is 13. In Python, the key for ROT-13 may be represented by means of the following dictionary:
+    </p>
+<pre>
 key = {'a':'n', 'b':'o', 'c':'p', 'd':'q', 'e':'r', 'f':'s', 'g':'t', 'h':'u', 
        'i':'v', 'j':'w', 'k':'x', 'l':'y', 'm':'z', 'n':'a', 'o':'b', 'p':'c', 
        'q':'d', 'r':'e', 's':'f', 't':'g', 'u':'h', 'v':'i', 'w':'j', 'x':'k',
@@ -69,69 +151,91 @@ key = {'a':'n', 'b':'o', 'c':'p', 'd':'q', 'e':'r', 'f':'s', 'g':'t', 'h':'u',
        'G':'T', 'H':'U', 'I':'V', 'J':'W', 'K':'X', 'L':'Y', 'M':'Z', 'N':'A', 
        'O':'B', 'P':'C', 'Q':'D', 'R':'E', 'S':'F', 'T':'G', 'U':'H', 'V':'I', 
        'W':'J', 'X':'K', 'Y':'L', 'Z':'M'}
-Your task in this exercise is to implement an encoder/decoder of ROT-13. Once you're done, you will be able to read the following secret message:
-
-   Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!
-Note that since English has 26 characters, your ROT-13 program will be able to both encode and decode texts written in English.
-
-23. Define a simple "spelling correction" function correct() that takes a string and sees to it that 1) two or more occurrences of the space character is compressed into one, and 2) inserts an extra space after a period if the period is directly followed by a letter. E.g. correct("This   is  very funny  and    cool.Indeed!") should return "This is very funny and cool. Indeed!" Tip: Use regular expressions!
-
-24. The third person singular verb form in English is distinguished by the suffix -s, which is added to the stem of the infinitive form: run -> runs. A simple set of rules can be given as follows:
-
-If the verb ends in y, remove it and add ies
-If the verb ends in o, ch, s, sh, x or z, add es
-By default just add s
-Your task in this exercise is to define a function make_3sg_form() which given a verb in infinitive form returns its third person singular form. Test your function with words like try, brush, run and fix. Note however that the rules must be regarded as heuristic, in the sense that you must not expect them to work for all cases. Tip: Check out the string method endswith().
-
-25. In English, the present participle is formed by adding the suffix -ing to the infinite form: go -> going. A simple set of heuristic rules can be given as follows:
-
-If the verb ends in e, drop the e and add ing (if not exception: be, see, flee, knee, etc.)
-If the verb ends in ie, change ie to y and add ing
-For words consisting of consonant-vowel-consonant, double the final letter before adding ing
-By default just add ing
-Your task in this exercise is to define a function make_ing_form() which given a verb in infinitive form returns its present participle form. Test your function with words such as lie, see, move and hug. However, you must not expect such simple rules to work for all cases.
-
-Higher order functions and list comprehensions
-----------------------------------------------
-
-26. Using the higher order function reduce(), write a function max_in_list() that takes a list of numbers and returns the largest one. Then ask yourself: why define and call a new function, when I can just as well call the reduce() function directly?
-
-27. Write a program that maps a list of words into a list of integers representing the lengths of the correponding words. Write it in three different ways: 1) using a for-loop, 2) using the higher order function map(), and 3) using list comprehensions.
-
-28. Write a function find_longest_word() that takes a list of words and returns the length of the longest one. Use only higher order functions.
-
-29. Using the higher order function filter(), define a function filter_long_words() that takes a list of words and an integer n and returns the list of words that are longer than n.
-
-30. Represent a small bilingual lexicon as a Python dictionary in the following fashion {"merry":"god", "christmas":"jul", "and":"och", "happy":gott", "new":"nytt", "year":"år"} and use it to translate your Christmas cards from English into Swedish. Use the higher order function map() to write a function translate() that takes a list of English words and returns a list of Swedish words.
-
-31. Implement the higher order functions map(), filter() and reduce(). (They are built-in but writing them yourself may be a good exercise.)
-
-Simple exercises including I/O
-------------------------------
-
-32. Write a version of a palindrome recogniser that accepts a file name from the user, reads each line, and prints the line to the screen if it is a palindrome.
-
-33. According to Wikipedia, a semordnilap is a word or phrase that spells a different word or phrase backwards. ("Semordnilap" is itself "palindromes" spelled backwards.) Write a semordnilap recogniser that accepts a file name (pointing to a list of words) from the user and finds and prints all pairs of words that are semordnilaps to the screen. For example, if "stressed" and "desserts" is part of the word list, the the output should include the pair "stressed desserts". Note, by the way, that each pair by itself forms a palindrome!
-
-34. Write a procedure char_freq_table() that, when run in a terminal, accepts a file name from the user, builds a frequency listing of the characters contained in the file, and prints a sorted and nicely formatted character frequency table to the screen.
-
-35. The International Civil Aviation Organization (ICAO) alphabet assigns code words to the letters of the English alphabet acrophonically (Alfa for A, Bravo for B, etc.) so that critical combinations of letters (and numbers) can be pronounced and understood by those who transmit and receive voice messages by radio or telephone regardless of their native language, especially when the safety of navigation or persons is essential. Here is a Python dictionary covering one version of the ICAO alphabet:
-
+</pre><p>Your task in this exercise is to implement an encoder/decoder of ROT-13. Once you're done, you will be able to read the following secret message:</p>
+<pre>
+   Pnrfne pvcure? V zhpu cersre Pnrfne fnynq!</pre>
+   
+<p>Note that since English has 26 characters, your ROT-13 program will be able to both encode and decode texts written in English.</p>
+<li>
+<p>Define a simple "spelling correction" function <code>correct()</code> that takes a string and 
+  sees to it that 1) two or more occurrences of the space character is compressed 
+  into one, and 2) inserts an extra space after a period if the period is directly followed 
+  by a letter. E.g. <code>correct("This &nbsp;&nbsp;is&nbsp;&nbsp;very funny&nbsp;&nbsp;and 
+  &nbsp;&nbsp;&nbsp;cool.Indeed!")</code> should return <code>"This 
+  is very funny and cool. Indeed!"</code> Tip: Use regular expressions!
+</p>
+</li>
+<li>
+<p>The <em>third person singular</em> verb form in English is distinguished by the suffix -<em>s</em>, which is added to the stem of the infinitive form: <em>run</em> -> <em>runs</em>. A simple set of rules can be given as follows:</p>
+<ol>
+    <li>If the verb ends in <em>y</em>, remove it and add <em>ies</em></li>
+    <li>If the verb ends in <em>o</em>, <em>ch</em>, <em>s</em>, <em>sh</em>, <em>x</em> or <em>z</em>, add <em>es</em></li>
+    <li>By default just add <em>s</em></li>
+</ol>
+<p>Your task in this exercise is to define a function <code>make_3sg_form()</code> which given a verb in infinitive form returns its third person singular form. Test your function with words like <em>try</em>, <em>brush</em>, <em>run</em> and <em>fix</em>. Note however that the rules must be regarded as heuristic, in the sense that you must not expect them to work for all cases. Tip: Check out the string method <code>endswith()</code>.</p>
+</li>
+<li>
+<p>In English, the <em>present participle</em> is formed by adding the suffix -<em>ing</em> to the infinite form: <em>go</em> -> <em>going</em>. A simple set of heuristic rules can be given as follows:</p>
+<ol>
+    <li>If the verb ends in <em>e</em>, drop the <em>e</em> and add <em>ing</em> (if not exception: <em>be</em>, <em>see</em>, <em>flee</em>, <em>knee</em>, etc.)</li>
+    <li>If the verb ends in <em>ie</em>, change <em>ie</em> to <em>y</em> and add <em>ing</em></li>
+    <li>For words consisting of consonant-vowel-consonant, double the final letter before adding <em>ing</em></li>
+    <li>By default just add <em>ing</em></li>
+</ol>
+<p>Your task in this exercise is to define a function <code>make_ing_form()</code> which given a verb in infinitive form returns its present participle form. Test your function with words such as <em>lie</em>, <em>see</em>, <em>move</em> and <em>hug</em>. However, you must not expect such simple rules to work for all cases.</p>
+</li>
+<h3>Higher order functions and list comprehensions</h3>
+  <li>
+    <p>Using the higher order function <code>reduce()</code>, write a function <code>max_in_list()</code> that takes a <em>list</em> of numbers and returns the largest one. Then ask yourself: why define and call a new function, when I can just as well call the <code>reduce()</code> function directly?</p>
+  </li>
+  <li>
+    <p>Write a program that maps a list of words into a list of integers representing the lengths of the correponding words. Write it in three different ways: 1) using a for-loop, 2) using the higher order function <code>map()</code>, and 3) using <em>list comprehensions</em>.</p>
+  </li>
+  <li>
+    <p>Write a function <code>find_longest_word()</code> that takes a list of words and returns the length of the longest one. Use only higher order functions.</p>
+  </li>
+  <li>
+    <p>Using the higher order function <code>filter()</code>, define a function <code>filter_long_words()</code> that takes a list of words and an integer <code>n</code> and returns the list of words that are longer than <code>n</code>.</p>
+  </li>
+  <li>
+    <p>Represent a small bilingual lexicon as a Python dictionary in the following fashion <code>{"merry":"god", "christmas":"jul", "and":"och", "happy":gott", "new":"nytt", "year":"år"}</code> and use it to translate your Christmas cards from English into Swedish. Use the higher order function <code>map()</code> to write a function <code>translate()</code> that takes a list of English words and returns a list of Swedish words.</p>
+  </li>
+  <li>
+    <p>Implement the higher order functions <code>map()</code>, <code>filter()</code> and <code>reduce()</code>. (They are built-in but writing them yourself may be a good exercise.)</p>
+  </li>   
+<h3>Simple exercises including I/O</h3>
+  <li>
+    <p>Write a version of a palindrome recogniser that accepts a file name from the user, reads each line, and prints the line to the screen if it is a palindrome.</p>
+  </li>
+  <li>
+    <p>According to Wikipedia, a <em>semordnilap</em> is a word or phrase that spells a <em>different</em> word or phrase backwards. ("Semordnilap" is itself "palindromes" spelled backwards.) Write a semordnilap recogniser that accepts a file name (pointing to a list of words) from the user and finds and prints all pairs of words that are semordnilaps to the screen. For example, if "stressed" and "desserts" is part of the word list, the the output should include the pair "stressed desserts". Note, by the way, that each pair by itself forms a palindrome!</p>
+  </li>
+  <li>
+    <p>Write a <em>procedure</em> <code>char_freq_table()</code> that, when run in a terminal, accepts a file name from the user, builds a frequency listing of the characters contained in the file, and prints a sorted and nicely formatted character frequency table to the screen.</p>
+  </li>
+<li>
+<p>The <em>International Civil Aviation Organization (ICAO) alphabet</em> assigns code words to the letters of the English alphabet acrophonically (Alfa for A, Bravo for B, etc.) so that critical combinations of letters (and numbers) can be pronounced and understood by those who transmit and receive voice messages by radio or telephone regardless of their native language, especially when the safety of navigation or persons is essential. Here is a Python dictionary covering one version of the ICAO alphabet:</p>
+<pre>
 d = {'a':'alfa', 'b':'bravo', 'c':'charlie', 'd':'delta', 'e':'echo', 'f':'foxtrot',
      'g':'golf', 'h':'hotel', 'i':'india', 'j':'juliett', 'k':'kilo', 'l':'lima',
      'm':'mike', 'n':'november', 'o':'oscar', 'p':'papa', 'q':'quebec', 'r':'romeo',
      's':'sierra', 't':'tango', 'u':'uniform', 'v':'victor', 'w':'whiskey', 
      'x':'x-ray', 'y':'yankee', 'z':'zulu'}
-Your task in this exercise is to write a procedure speak_ICAO() able to translate any text (i.e. any string) into spoken ICAO words. You need to import at least two libraries: os and time. On a mac, you have access to the system TTS (Text-To-Speech) as follows: os.system('say ' + msg), where msg is the string to be spoken. (Under UNIX/Linux and Windows, something similar might exist.) Apart from the text to be spoken, your procedure also needs to accept two additional parameters: a float indicating the length of the pause between each spoken ICAO word, and a float indicating the length of the pause between each word spoken.
-
-36. A hapax legomenon (often abbreviated to hapax) is a word which occurs only once in either the written record of a language, the works of an author, or in a single text. Define a function that given the file name of a text will return all its hapaxes. Make sure your program ignores capitalization.
-
-37. Write a program that given a text file will create a new text file in which all the lines from the original file are numbered from 1 to n (where n is the number of lines in the file).
-
-38. Write a program that will calculate the average word length of a text stored in a file (i.e the sum of all the lengths of the word tokens in the text, divided by the number of word tokens).
-
-39. Write a program able to play the "Guess the number"-game, where the number to be guessed is randomly chosen between 1 and 20. (Source: http://inventwithpython.com) This is how it should work when run in a terminal:
-
+</pre>
+<p>Your task in this exercise is to write a procedure <code>speak_ICAO()</code> able to translate any text (i.e. any string) into <em>spoken</em> ICAO words. You need to import at least two libraries: <code>os</code> and <code>time</code>. On a mac, you have access to the system TTS (Text-To-Speech) as follows: <code>os.system('say ' + msg)</code>, where <code>msg</code> is the string to be spoken. (Under UNIX/Linux and Windows, something similar might exist.) Apart from the text to be spoken, your procedure also needs to accept two additional parameters: a float indicating the length of the pause between each spoken ICAO word, and a float indicating the length of the pause between each word spoken.</p>
+</li>
+<li>
+    <p>A <em>hapax legomenon</em> (often abbreviated to <em>hapax</em>) is a word which occurs only once in either the written record of a language, the works of an author, or in a single text. Define a function that given the file name of a text will return all its hapaxes. Make sure your program ignores capitalization.</p>
+</li>
+<li>
+    <p>Write a program that given a text file will create a new text file in which all the lines from the original file are <em>numbered</em> from <em>1</em> to <em>n</em> (where n is the number of lines in the file).</p>
+</li>
+<li>
+    <p>Write a program that will calculate the average word length of a text stored in a file (i.e the sum of all the lengths of the word tokens in the text, divided by the number of word tokens).</p>
+</li>
+  <li>
+    <p>Write a program able to play the "Guess the number"-game, where the number to be guessed is randomly chosen between 1 and 20. (Source: <a href="http://inventwithpython.com">http://inventwithpython.com</a>) This is how it should work when run in a terminal:<p>
+    <pre>
 >>> import guess_number
 Hello! What is your name?
 Torbjörn
@@ -144,20 +248,24 @@ Take a guess.
 Your guess is too low.
 Take a guess.
 18
-Good job, Torbjörn! You guessed my number in 3 guesses!
+Good job, Torbjörn! You guessed my number in 3 guesses!</pre>
+  </li>
 
-40. An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once; e.g., orchestra = carthorse, A decimal point = I'm a dot in place. Write a Python program that, when started 1) randomly picks a word w from given list of words, 2) randomly permutes w (thus creating an anagram of w), 3) presents the anagram to the user, and 4) enters an interactive loop in which the user is invited to guess the original word. It may be a good idea to work with (say) colour words only. The interaction with the program may look like so:
-
+  <li>
+      <p>An <em>anagram</em> is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once; e.g., <em>orchestra = carthorse</em>, <em>A decimal point = I'm a dot in place</em>. Write a Python program that, when started 1) randomly picks a word w from given list of words, 2) randomly permutes w (thus creating an anagram of w), 3) presents the anagram to the user, and 4) enters an interactive loop in which the user is invited to guess the original word. It may be a good idea to work with (say) colour words only. The interaction with the program may look like so:</p>
+<pre>
 >>> import anagram
 Colour word anagram: onwbr
 Guess the colour word!
 black
 Guess the colour word!
 brown
-Correct!
+Correct!</pre>
+  </li>
 
-41. In a game of Lingo, there is a hidden word, five characters long. The object of the game is to find this word by guessing, and in return receive two kinds of clues: 1) the characters that are fully correct, with respect to identity as well as to position, and 2) the characters that are indeed present in the word, but which are placed in the wrong position. Write a program with which one can play Lingo. Use square brackets to mark characters correct in the sense of 1), and ordinary parentheses to mark characters correct in the sense of 2). Assuming, for example, that the program conceals the word "tiger", you should be able to interact with it in the following way:
-
+  <li>  
+<p>In a game of <em>Lingo</em>, there is a hidden word, five characters long. The object of the game is to find this word by guessing, and in return receive two kinds of clues: 1) the characters that are fully correct, with respect to identity as well as to position, and 2) the characters that are indeed present in the word, but which are placed in the wrong position. Write a program with which one can play Lingo. Use square brackets to mark characters correct in the sense of 1), and ordinary parentheses to mark characters correct in the sense of 2). Assuming, for example, that the program conceals the word "tiger", you should be able to interact with it in the following way:</p>
+    <pre>
 >>> import lingo
 snake
 Clue: snak(e)
@@ -166,62 +274,86 @@ Clue: f[i](e)s(t)
 times
 Clue: [t][i]m[e]s
 tiger
-Clue: [t][i][g][e][r]
+Clue: [t][i][g][e][r]</pre>
+</li>
 
-Somewhat harder exercises
--------------------------
+<h3>Somewhat harder exercises</h3>
+<li>
+<p>A <em>sentence splitter</em> is a program capable of splitting a text into sentences. The standard set of heuristics for sentence splitting includes (but isn't limited to) the following rules:</p> 
 
-42. A sentence splitter is a program capable of splitting a text into sentences. The standard set of heuristics for sentence splitting includes (but isn't limited to) the following rules:
-
-Sentence boundaries occur at one of "." (periods), "?" or "!", except that
-
-	a. Periods followed by whitespace followed by a lower case letter are not sentence boundaries.
-	b. Periods followed by a digit with no intervening whitespace are not sentence boundaries.
-	c. Periods followed by whitespace and then an upper case letter, but preceded by any of a short list of titles are not sentence boundaries. Sample titles include Mr., Mrs., Dr., and so on.
-	d.Periods internal to a sequence of letters with no adjacent whitespace are not sentence boundaries (for example, www.aptex.com, or e.g).
-	e.Periods followed by certain kinds of punctuation (notably comma and more periods) are probably not sentence boundaries.
-
-Your task here is to write a program that given the name of a text file is able to write its content with each sentence on a separate line. Test your program with the following short text: Mr. Smith bought cheapsite.com for 1.5 million dollars, i.e. he paid a lot for it. Did he mind? Adam Jones Jr. thinks he didn't. In any case, this isn't true... Well, with a probability of .9 it isn't. The result should be:
-
-Mr. Smith bought cheapsite.com for 1.5 million dollars, i.e. he paid a lot for it.
+<p>Sentence boundaries occur at one of "." (periods), "?" or "!", except that</p>
+<ol>
+<li>Periods followed by whitespace followed by a lower case letter are not sentence boundaries.</li> 
+<li>Periods followed by a digit with no intervening whitespace are not sentence boundaries.</li>
+<li>Periods followed by whitespace and then an upper case letter, but preceded by any of a short list of titles are not sentence boundaries. Sample titles include <em>Mr</em>., <em>Mrs</em>., <em>Dr</em>., and so on.</li>
+<li>Periods internal to a sequence of letters with no adjacent whitespace are not sentence boundaries (for example, <em>www.aptex.com</em>, or <em>e.g</em>).</li>
+<li>Periods followed by certain kinds of punctuation (notably comma and more periods) are probably not sentence boundaries.</li>
+</ol>
+<p>Your task here is to write a program that given the name of a text file is able to write its content with each sentence on a separate line. Test your program with the following short text: <em>Mr. Smith bought cheapsite.com for 1.5 million dollars, i.e. he paid a lot for it. Did he mind? Adam Jones Jr. thinks he didn't. In any case, this isn't true... Well, with a probability of .9 it isn't.</em> The result should be:
+<pre>Mr. Smith bought cheapsite.com for 1.5 million dollars, i.e. he paid a lot for it.
 Did he mind?
 Adam Jones Jr. thinks he didn't.
 In any case, this isn't true...
 Well, with a probability of .9 it isn't.
+</pre>
+</p>    
+</li>
 
-43. An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once; e.g., orchestra = carthorse. Using the word list at http://www.puzzlers.org/pub/wordlists/unixdict.txt, write a program that finds the sets of words that share the same characters that contain the most words in them.
 
-44. Your task in this exercise is as follows:
+<li>
+<p>An <em>anagram</em> is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once; e.g., <em>orchestra = carthorse</em>. Using the word list at <a href="http://www.puzzlers.org/pub/wordlists/unixdict.txt">http://www.puzzlers.org/pub/wordlists/unixdict.txt</a>, write a program that finds the sets of words that share the same characters that contain the most words in them.</p>  
+</li>
 
-Generate a string with N opening brackets ("[") and N closing brackets ("]"), in some arbitrary order.
-Determine whether the generated string is balanced; that is, whether it consists entirely of pairs of opening/closing brackets (in that order), none of which mis-nest.
-Examples:
-
+<li><p>
+Your task in this exercise is as follows: 
+</p>
+<ul><li> Generate a string with N opening brackets ("<code>[</code>") and N closing brackets ("<code>]</code>"), in some arbitrary order. 
+</li><li> Determine whether the generated string is <i>balanced</i>; that is, whether it consists entirely of pairs of opening/closing brackets (in that order), none of which mis-nest.
+</li></ul>
+<p>Examples:
+</p>
+<pre>
    []        OK   ][        NOT OK
    [][]      OK   ][][      NOT OK
    [[][]]    OK   []][[]    NOT OK
+</pre>
+</p>
+</li>
 
-45. A certain childrens game involves starting with a word in a particular category. Each participant in turn says a word, but that word must begin with the final letter of the previous word. Once a word has been given, it cannot be repeated. If an opponent cannot give a word in the category, they fall out of the game. For example, with "animals" as the category,
-
-Child 1: dog 
+<li>
+<p>A certain childrens game involves starting with a word in a particular category. Each participant in turn says a word, but that word must begin with the final letter of the previous word. Once a word has been given, it cannot be repeated. If an opponent cannot give a word in the category, they fall out of the game. For example, with "animals" as the category,
+</p>
+<pre>Child 1: dog 
 Child 2: goldfish
 Child 1: hippopotamus
 Child 2: snake
 ...
-
-Your task in this exercise is as follows: Take the following selection of 70 English Pokemon names (extracted from Wikipedia's list of Pokemon) and generate the/a sequence with the highest possible number of Pokemon names where the subsequent name starts with the final letter of the preceding name. No Pokemon name is to be repeated.
-
-audino bagon baltoy banette bidoof braviary bronzor carracosta charmeleon
+</pre>
+<p>Your task in this exercise is as follows: Take the following selection of 70 English Pokemon names (extracted from <a href="http://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon">Wikipedia's list of Pokemon</a>) and  generate the/a sequence with the highest possible number of Pokemon names where the subsequent name starts with the final letter of the preceding name. No Pokemon name is to be repeated.
+</p>
+<pre>audino bagon baltoy banette bidoof braviary bronzor carracosta charmeleon
 cresselia croagunk darmanitan deino emboar emolga exeggcute gabite
 girafarig gulpin haxorus heatmor heatran ivysaur jellicent jumpluff kangaskhan
 kricketune landorus ledyba loudred lumineon lunatone machamp magnezone mamoswine
 nosepass petilil pidgeotto pikachu pinsir poliwrath poochyena porygon2
 porygonz registeel relicanth remoraid rufflet sableye scolipede scrafty seaking
 sealeo silcoon simisear snivy snorlax spoink starly tirtouga trapinch treecko
-tyrogue vigoroth vulpix wailord wartortle whismur wingull yamask
+tyrogue vigoroth vulpix wailord wartortle whismur wingull yamask</pre>
 
-46. An alternade is a word in which its letters, taken alternatively in a strict sequence, and used in the same order as the original word, make up at least two other words. All letters must be used, but the smaller words are not necessarily of the same length. For example, a word with seven letters where every second letter is used will produce a four-letter word and a three-letter word. Here are two examples:
+</li>
 
+<li>
+<p>An <em>alternade</em> is a word in which its letters, taken alternatively in a strict sequence, and used in the same order as the original word, make up at least two other words. All letters must be used, but the smaller words are not necessarily of the same length. For example, a word with seven letters where every second letter is used will produce a four-letter word and a three-letter word. Here are two examples:
+<pre>
   "board": makes "bad" and "or".
   "waists": makes "wit" and "ass".
-Using the word list at http://www.puzzlers.org/pub/wordlists/unixdict.txt, write a program that goes through each word in the list and tries to make two smaller words using every second letter. The smaller words must also be members of the list. Print the words to the screen in the above fashion.
+</pre>
+Using the word list at <a href="http://www.puzzlers.org/pub/wordlists/unixdict.txt">http://www.puzzlers.org/pub/wordlists/unixdict.txt</a>, write a program that goes through each word in the list and tries to make two smaller words using every second letter. The smaller words must also be members of the list. Print the words to the screen in the above fashion.
+</p>
+</li>
+
+  <ol>
+  </div></div>
+  </body>
+</html>
+

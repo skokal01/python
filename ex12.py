@@ -23,8 +23,8 @@ def histogram(s):
 
 def main():
     # Test inputs
-    print histogram([4,7,5])
-    print histogram([2])
+    histogram([4,7,5])
+    histogram([2])
 
 
 if __name__ == "__main__":
